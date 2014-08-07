@@ -29,6 +29,13 @@ a:hover {
   text-decoration: none;
 }
 
+button {
+  padding: 1em;
+  border: 0;
+  background-color: #424242;
+  color: #fff;
+  border-radius: 4px;
+}
 
 table {
   width: 100%;
@@ -46,6 +53,10 @@ table {
 
   .version th {
     padding-top: 1.18em;
+  }
+  .issues small {
+    display: block;
+    font-size: .7em;
   }
   .changes th {
     padding-top: 0.2em;
