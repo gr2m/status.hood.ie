@@ -1,0 +1,333 @@
+/*
+.d$b.  .d$b.  .d$$$$$$b.    .d$$$$$$b.  .d$$$$$$b.  .d$b..d$$$$$$$$b.
+$$$$$..$$$$$.$$$$$$$$$$$b .$$$$$$$$$$$b $$$$$$$$$$b $$$$$$$$$$$$$$$P'
+$$$$$$$$$$$$d$$$$$$$$$$$$bd$$$$$$$$$$$$b$$$$$$$$$$$b$$$$$$$$$$$$$$$b.
+$$$$$$$$$$$$Q$$$$$$$$$$$$PQ$$$$$$$$$$$$P$$$$$$$$$$$P$$$$$$$$$$$$$$$P'
+$$$$$  $$$$$'$$$$$$$$$$$$''$$$$$$$$$$$$'$$$$$$$$$$P $$$$$$$$$$$$$$$b.
+'Q$P'  'Q$P'  'Q$$$$$$P'    'Q$$$$$$P'  'Q$$$$$$$P  'Q$P''Q$$$$$$$$P'
+
+Base CSS
+
+*/
+
+//
+// Variables
+// --------------------------------------------------
+
+
+//== Colors
+//
+//## These are the official Hoodie colors
+
+// Hoodie colors
+
+$hoodie-blue:     #312783;
+$hoodie-green:    #0B8E36;
+$hoodie-yellow:   #F9B233;
+$hoodie-orange:   #E94E1B;
+$hoodie-brown:    #693C10;
+$hoodie-red:      #BE1522;
+
+// Hoodie pale colors
+
+$hoodie-paleblue:       #DCE7EA;
+$hoodie-palegreen:      #BFD4B4;
+$hoodie-paleyellow:     #FAF1B0;
+$hoodie-paleorange:     #F9D4A2;
+$hoodie-palebrown:      #C5B09A;
+$hoodie-palered:        #ECAC8B;
+
+// Monochromatic colors (from light to dark)
+
+$hoodie-white:          #FFFFFF;
+$hoodie-lightbeige:     #F8F5F3;
+$hoodie-lightgrey:      #807E7B;
+$hoodie-darkgrey:       #414040;
+$hoodie-mediumbrown:    #373435;
+$hoodie-nearblack:      #282726;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+@font-face {
+  font-family: 'Bariol';
+  src: url('../assets/fonts/bariol_bold-webfont.eot');
+  src: url('../assets/fonts/bariol_bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/bariol_bold-webfont.woff') format('woff'),
+       url('../assets/fonts/bariol_bold-webfont.ttf') format('truetype'),
+       url('../assets/fonts/bariol_bold-webfont.svg#bariol_boldbold') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bariol';
+  src: url('../assets/fonts/bariol_regular-webfont.eot');
+  src: url('../assets/fonts/bariol_regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/bariol_regular-webfont.woff') format('woff'),
+       url('../assets/fonts/bariol_regular-webfont.ttf') format('truetype'),
+       url('../assets/fonts/bariol_regular-webfont.svg#bariol_regularregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$hoodie-font-size: 16pt;
+
+//
+// Bootstrap
+// --------------------------------------------------
+
+//==Bootstrap Variables
+//
+//## Rewires some bootstrap variables
+
+$gray-darker:            $hoodie-nearblack;
+$gray-dark:              $hoodie-darkgrey;
+$gray:                   $hoodie-mediumbrown;
+$gray-light:             $hoodie-lightgrey;
+$gray-lighter:           $hoodie-lightbeige;
+
+$brand-primary:         $hoodie-blue;
+$brand-success:         $hoodie-green;
+$brand-info:            $hoodie-orange;
+$brand-warning:         $hoodie-yellow;
+$brand-danger:          $hoodie-red;
+
+$text-color:            $hoodie-nearblack;
+
+$code-color:            $hoodie-blue;
+$code-bg:               $hoodie-paleblue;
+
+$font-family-sans-serif:  Bariol, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-base: $hoodie-font-size;
+
+$grid-gutter-width:         30px !default;
+
+// Small screen / tablet
+$container-tablet:             ((720px + $grid-gutter-width)) !default;
+
+
+// Medium screen / desktop
+$container-desktop:            ((720px + $grid-gutter-width)) !default;
+
+
+// Large screen / wide desktop
+$container-large-desktop:      ((720px + $grid-gutter-width)) !default;
+
+
+//==Bootstrap Sources
+//
+//## Import the core bootstrap files
+@import "../components/bootstrap-sass-official/assets/stylesheets/bootstrap/_variables";
+@import "../components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
+
+@import "../components/bootstrap-sass-official/assets/stylesheets/bootstrap/normalize";
+@import "../components/bootstrap-sass-official/assets/stylesheets/bootstrap/print";
+
+@import "../components/bootstrap-sass-official/assets/stylesheets/bootstrap/scaffolding";
+@import "../components/bootstrap-sass-official/assets/stylesheets/bootstrap/type";
+@import "../components/bootstrap-sass-official/assets/stylesheets/bootstrap/code";
+@import "../components/bootstrap-sass-official/assets/stylesheets/bootstrap/grid";
+@import "../components/bootstrap-sass-official/assets/stylesheets/bootstrap/tables";
+@import "../components/bootstrap-sass-official/assets/stylesheets/bootstrap/forms";
+@import "../components/bootstrap-sass-official/assets/stylesheets/bootstrap/buttons";
+
+//
+// General Styling
+// --------------------------------------------------
+
+//==Styling
+//
+//## Default Hoodie look
+
+body{
+    font-family: $font-family-sans-serif;
+    font-size: $hoodie-font-size;
+    color: $hoodie-nearblack;
+}
+
+h1{
+    margin-top: 16px;
+}
+
+a{
+    text-decoration: underline;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+
+  small,
+  .small {
+    font-size: 55%;
+  }
+}
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+
+  small,
+  .small {
+    font-size: 65%;
+  }
+}
+
+pre, samp, code{
+    font-size: 3*($hoodie-font-size/4);
+}
+
+.container-fluid .container{
+    padding-left: 0;
+}
+
+.container{
+    margin-left: 20%;
+    aside {
+        float: left;
+        width: 20%;
+        margin-left: -25%;
+        font-size: 3*($hoodie-font-size/4);
+        line-height: 1.8;
+        color: $hoodie-lightgrey;
+    }
+    footer{
+        font-size: 3*($hoodie-font-size/4);
+	    color: $hoodie-lightgrey;
+        text-transform: upcase;
+    }
+
+}
+
+// Prism highlighting
+
+pre{
+    border-color: lighten($hoodie-lightgrey, 25%);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: lighten($hoodie-nearblack, 7%);
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    direction: ltr;
+    text-align: left;
+    word-spacing: normal;
+
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    overflow: scroll;
+}
+
+pre[class*="language-"] code {
+    display: block;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: transparent;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: $hoodie-lightgrey;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number {
+    color: $hoodie-red;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string {
+    color: $hoodie-green;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: $hoodie-brown;
+    background: hsla(0,0%,100%,.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: $hoodie-blue;
+}
+
+
+.token.regex,
+.token.important {
+    color: $hoodie-yellow;
+}
+
+.token.important {
+    font-weight: bold;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+@media screen and (max-width: 700px) {
+
+    .container{
+        margin-left: 0;
+        aside {
+            float: none;
+            width: auto;
+            margin: 0 0 20px 0;
+            line-height: 1.5;
+        }
+    }
+
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6 {
+
+      small,
+      .small {
+        display: block;
+        padding: 0.5em 0;
+      }
+    }
+}

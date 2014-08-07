@@ -1,0 +1,132 @@
+//Always import the main Hoodie Library
+@import "hoodie.scss";
+
+//
+// Swatches
+// --------------------------------------------------
+
+$swatchDiameter: 90px;
+
+.swatch{
+  width: $swatchDiameter;
+  height: $swatchDiameter;
+  border-radius: 50%;
+  display: inline-block;
+  color: $hoodie-white;
+  font-size: 3*($hoodie-font-size/4);
+  font-family: 'Bariol';
+  font-weight: 500;
+  line-height: $swatchDiameter;
+  text-align: center;
+  margin: .5em;
+  &.dark-text{
+    color: $hoodie-nearblack;
+  }
+  &.dark-border{
+    color: $hoodie-nearblack;
+    box-shadow: inset 0px 0px 0px 4px $hoodie-nearblack;
+  }
+  &.hoodie-blue{
+    background-color: $hoodie-blue;
+  }
+  &.hoodie-green{
+    background-color: $hoodie-green;
+  }
+  &.hoodie-yellow{
+    background-color: $hoodie-yellow;
+  }
+  &.hoodie-orange{
+    background-color: $hoodie-orange;
+  }
+  &.hoodie-brown{
+    background-color: $hoodie-brown;
+  }
+  &.hoodie-red{
+    background-color: $hoodie-red;
+  }
+  &.hoodie-paleblue{
+    background-color: $hoodie-paleblue;
+  }
+  &.hoodie-palegreen{
+    background-color: $hoodie-palegreen;
+  }
+  &.hoodie-paleyellow{
+    background-color: $hoodie-paleyellow;
+  }
+  &.hoodie-paleorange{
+    background-color: $hoodie-paleorange;
+  }
+  &.hoodie-palebrown{
+    background-color: $hoodie-palebrown;
+  }
+  &.hoodie-palered{
+    background-color: $hoodie-palered;
+  }
+  &.hoodie-white{
+    background-color: $hoodie-white;
+  }
+  &.hoodie-darkgrey{
+    background-color: $hoodie-darkgrey;
+  }
+  &.hoodie-nearblack{
+    background-color: $hoodie-nearblack;
+  }
+  &.hoodie-mediumbrown{
+    background-color: $hoodie-mediumbrown;
+  }
+  &.hoodie-lightbeige{
+    background-color: $hoodie-lightbeige;
+  }
+  &.hoodie-lightgrey{
+      background-color: $hoodie-lightgrey;
+  }
+}
+
+
+.example{
+	position: relative;
+	padding: 1em;
+    margin: 0.5em 0;
+	border-color: lighten($hoodie-lightgrey, 25%);
+	border-style: solid;
+	border-width: 2px;
+    border-radius: 5px;
+}
+
+.example:after{
+	position:absolute;
+	top: 0.5em;
+	left: 1em;
+	font-size: $hoodie-font-size/2;
+	font-weight: 500;
+	color: $hoodie-lightgrey;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	content:"Example"
+}
+
+.doc-photo{
+    background-color: $hoodie-blue;
+    background-image: url(../assets/images/hoodie_logo_small.png);
+    color: $hoodie-paleblue;
+    padding: 2em;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+.doc-photo{
+    background-image: url(../assets/images/hoodie_logo_small@2x.png);
+    background-size: 95px;
+}
+}
+
+@media screen and (max-width: 700px) {
+    .doc-photo{
+        padding: 1em;
+    }
+}
